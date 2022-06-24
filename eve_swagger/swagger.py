@@ -83,12 +83,10 @@ def _compile_docs(swagger):
     node(components, "examples", examples())
     node(components, "requestBodies", request_bodies())
     node(components, "headers", headers())
-    node(components, "securitySchemes", security_schemes())
     node(components, "links", links())
     node(components, "callbacks", callbacks())
     node(root, "components", components)
 
-    node(root, "security", security())
     node(root, "tags", tags())
     node(root, "externalDocs", external_docs())
 
