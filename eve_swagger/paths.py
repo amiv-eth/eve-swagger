@@ -168,7 +168,6 @@ def get_response(rd):
                             }
                         },
                     },
-                    "default": get_ref_response("error"),
                 },
             ),
             ("parameters", get_ref_query()),
@@ -198,7 +197,6 @@ def post_response(rd):
                 "responses",
                 {
                     "201": {"description": "operation has been successful"},
-                    "default": get_ref_response("error"),
                 },
             ),
             ("parameters", []),
@@ -219,7 +217,6 @@ def delete_response(rd):
                 "responses",
                 {
                     "204": {"description": "operation has been successful"},
-                    "default": get_ref_response("error"),
                 },
             ),
             ("parameters", []),
@@ -248,7 +245,6 @@ def getitem_response_additional_lookup(rd):
                             "application/json": {"schema": get_ref_schema(rd)}
                         },
                     },
-                    "default": get_ref_response("error"),
                 },
             ),
             ("parameters", [additional_lookup_parameter(rd)]),
@@ -276,7 +272,6 @@ def getitem_response(rd):
                             "application/json": {"schema": get_ref_schema(rd)}
                         },
                     },
-                    "default": get_ref_response("error"),
                 },
             ),
             ("parameters", [id_parameter(rd)]),
@@ -298,7 +293,6 @@ def put_response(rd):
                 "responses",
                 {
                     "200": {"description": "%s document replaced successfully" % title},
-                    "default": get_ref_response("error"),
                 },
             ),
             ("requestBody", get_ref_requestBody(rd)),
@@ -321,7 +315,6 @@ def patch_response(rd):
                 "responses",
                 {
                     "200": {"description": "%s document updated successfully" % title},
-                    "default": get_ref_response("error"),
                 },
             ),
             ("requestBody", get_ref_requestBody(rd)),
@@ -344,7 +337,6 @@ def deleteitem_response(rd):
                 "responses",
                 {
                     "204": {"description": "%s document deleted successfully" % title},
-                    "default": get_ref_response("error"),
                 },
             ),
             ("parameters", [id_parameter(rd), get_ref_ifmatch()]),
