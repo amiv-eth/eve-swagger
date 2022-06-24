@@ -50,7 +50,7 @@ def definitions():
     response_metadata_schema = {
         "type": "object",
         "properties": {
-            "page": {"type": "string"},
+            "page": {"type": "integer"},
             "total": {"type": "integer"},
             "max_results": {"type": "integer"},
         },
