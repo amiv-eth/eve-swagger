@@ -142,6 +142,9 @@ def _field_props(rules, dr_sources, prefix):
     if eve_type is None:
         return resp
 
+    if "title" in rules:
+        resp["title"] = rules["title"]
+
     if "description" in rules:
         resp["description"] = rules["description"]
 
